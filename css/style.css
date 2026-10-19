@@ -1,0 +1,65 @@
+@import url(./reset.css);
+@import url(./Design-System.css);
+
+.color-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.color-section__sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 260px;
+    background-color: var(--color-sidebar-bg);
+    padding: 30px 20px;
+    align-items: center;
+}
+
+.color-section__title{
+    color: var(--color-sidebar-text);
+    font-size: 24px;
+    /* Peso da fonte: NÃO UTILIZA PX */
+    font-weight: 700;
+    margin-bottom: 35px;
+    text-align: center;
+    /* Espaçamento entre as letras */
+    letter-spacing: 0.5px;
+}
+
+.color-section__menu{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* Elemento Link: Estilo base dos botões de navegação */
+.color-section__link{
+    color: var(--color-sidebar-text);
+    text-decoration: none;
+    font-size: 18px;
+    /* Peso sa fonte (não usar px) */
+    font-weight: 600;
+    padding: 12px 90px;
+    border-radius: 6px;
+    text-align: center;
+    /* Efeito no momento em que o mouse é posicionado */
+    transition: all 0.3s ease-in-out;
+}
+
+.color-section__link--active{
+    color: var(--ui-link-active-text);
+    background-color: var(--ui-link-active-bg);
+    box-shadow: 0px 2px 5px rgba(244, 244, 248, 0.25);}
+
+.color-section__link--active:hover{
+    color: var(--ui-link-active-text);
+    transform: scale(1.05);}
+
+.color-section__link:not(.color-section__link--active):hover{
+    color: var(--ui-text-title);
+    background-color: var(--ui-link-hover-bg);
+}
