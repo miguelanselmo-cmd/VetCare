@@ -267,8 +267,8 @@ body {
     position: fixed;
     bottom: 70px; 
     right: 24px;
-    background-color: #25d366;
-    color: #ffffff;
+    background-color: var(--color-secondary);
+    color: var(--color-bg-card);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 50px;
