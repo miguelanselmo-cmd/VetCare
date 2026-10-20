@@ -1,7 +1,7 @@
 @import url(./Design-System.css);
 @import url(./reset.css);
 
-/* Configurações de Layout Geral */
+
 body {
     font-family: var(--font-main);
     margin: 0;
@@ -11,23 +11,21 @@ body {
 }
 
 .main-content {
-    margin-left: 20%; /* Afastamento da barra fixa lateral esquerda */
+    margin-left: 20%; 
     padding-bottom: 50px;
 }
 
-/* Cores de Fundo Alternadas das Seções */
 .bg-white {
-    background-color: #ffffff;
+    background-color: var(--color-bg-main);
 }
 
 .bg-light-green {
-    background-color: #f2f9f6; /* Tom verde bem suave de fundo observado no vídeo */
+    background-color: var(--color-bg-main); 
 }
 
-/* Estilização da Seção */
 .section-area {
     padding: 80px 6%;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,10 +53,9 @@ body {
     justify-content: center;
 }
 
-/* Títulos e Parágrafos */
 .section-title-hero {
     font-size: 32px;
-    color: #1a3328;
+    color: var(--color-text-title);
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -73,7 +70,7 @@ body {
 }
 
 .section-paragraph {
-    color: #4b5563;
+    color: var(--color-text-muted);
     line-height: 1.7;
     font-size: 16px;
 }
@@ -86,14 +83,13 @@ body {
     object-fit: cover;
 }
 
-/* Sidebar Esquerda (Verde) */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 20%;
     height: 100%;
-    background-color: var(--color-sidebar-bg); /* Verde principal corporativo do vídeo */
+    background-color: var(--color-sidebar-bg);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -108,7 +104,7 @@ body {
 
 .header__title {
     font-size: var(--font-size-lg);
-    color: #ffffff;
+    color: var(--color-bg-card);
     font-weight: 700;
     margin: 0;
 }
@@ -129,7 +125,7 @@ body {
 
 .nav__link {
     display: block;
-    color: #ffffff;
+    color: var(--color-bg-card);
     text-decoration: none;
     font-size: var(--font-size-sm);
     font-weight: 600;
@@ -138,7 +134,6 @@ body {
     transition: var(--transition);
 }
 
-/* Hover e Link Ativo sutil sem elevação */
 .nav__link:hover,
 .nav__link:focus{
     background-color: var(--color-sidebar-text);
@@ -147,7 +142,6 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
-/* Grid de Cards Gerais (Três Colunas) */
 .grid-three-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -155,28 +149,27 @@ body {
 }
 
 .card-item {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px var(--shadow-card);
 }
 
 .card-item h3 {
-    color: #0c8254;
+    color: var(--color-text-body);
     margin-top: 0;
     margin-bottom: 12px;
     font-size: 18px;
 }
 
 .card-item p {
-    color: #4b5563;
+    color: var(--color-text-muted);
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
 }
 
-/* Customização dos Cards de Integrantes do Corpo Clínico */
 .flex-card {
     display: flex;
     flex-direction: column;
@@ -207,28 +200,26 @@ body {
     margin-bottom: 12px;
 }
 
-/* Caixa informativa interna na Infraestrutura */
 .info-atendimento-box {
     margin-top: 25px;
-    background: rgba(12, 130, 84, 0.05);
+    background: var(--color-bg-card);
     padding: 20px;
-    border-left: 4px solid #0c8254;
+    border-left: 4px solid var(--color-primary);
     border-radius: 4px;
 }
 
 .info-atendimento-box h3 {
     margin-top: 0;
-    color: #0c8254;
+    color: var(--color-text-body);
     font-size: 16px;
 }
 
 .info-atendimento-box p {
     margin: 6px 0;
     font-size: 14px;
-    color: #4b5563;
+    color: var(--color-text-muted);
 }
 
-/* Seção FAQ */
 .section-container-faq {
     width: 100%;
     max-width: 850px;
@@ -236,7 +227,7 @@ body {
 
 .faq-main-title {
     font-size: 26px;
-    color: #1a3328;
+    color: var(--color-text-title);
     margin-bottom: 30px;
 }
 
@@ -247,19 +238,19 @@ body {
 }
 
 .faq__item {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     padding: 16px 20px;
 }
 
 .faq__item[open] {
-    border-color: #0c8254;
+    border-color: var(--color-border);
 }
 
 .faq__summary {
     font-weight: 600;
-    color: #1a3328;
+    color: var(--color-text-body);
     cursor: pointer;
     outline: none;
 }
@@ -267,15 +258,31 @@ body {
 .faq__text {
     margin-top: 12px;
     margin-bottom: 0;
-    color: #6b7280;
+    color: var(--color-text-muted);
     font-size: 14px;
     line-height: 1.6;
 }
 
-/* Botão Flutuante do WhatsApp */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 70px; 
+    right: 24px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1001;
+    transition: var(--transition);
+}
 
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+}
 
-/* Footer Fixo */
 .footer {
     position: fixed;
     bottom: 0;
@@ -283,7 +290,7 @@ body {
     width: 80%;
     height: 45px;
     background-color: var( --color-sidebar-bg);
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0);
     display: flex;
     align-items: center;
     justify-content: space-between;
